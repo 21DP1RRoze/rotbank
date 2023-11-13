@@ -22,35 +22,25 @@
     </div>
     <div id="depositID">
         <div class="depositContainer">
-            <div class="depositIMG">Deposit account.</div>
+            <div class="depositIMG">Deposit account</div>
             <div class="depositDIVd"></div>
-            <div class="depositTEXT1">At [Bank Name], we're dedicated to helping you secure your financial future. Our Deposit Account Service is designed to provide you with a safe and dependable way to save and manage your money.
+            <div class="depositTEXT1">At RotBank, we're dedicated to helping you secure your financial future. Our Deposit Account Service is designed to provide you with a safe and dependable way to save and manage your money.<br>
 
-Here's what you can expect:
+Here's what you can expect:<br><br><ul>
 
-Security and Peace of Mind: Your funds are protected with the highest level of security and compliance measures, ensuring your peace of mind.
+<li><strong><span class="tab">Security and Peace of Mind:</span></strong><br> Your funds are protected with the highest level of security and compliance measures, ensuring your peace of mind.</li>
 
-Competitive Returns: Your money will grow with our competitive interest rates, helping you reach your financial goals faster.
+<li><strong><span class="tab">Competitive Returns:</span></strong><br> Your money will grow with our competitive interest rates, helping you reach your financial goals faster.</li>
 
-Convenience and Accessibility: Manage your account with ease through our online platform or mobile app, or visit one of our branches. Your finances are at your fingertips 24/7.
+<li><strong><span class="tab">Convenience and Accessibility:</span></strong><br> Manage your account with ease through our online platform or mobile app, or visit one of our branches. Your finances are at your fingertips 24/7.</li>
 
-Tailored Solutions: Choose from a range of deposit account options, including regular savings accounts and certificates of deposit, to find the perfect fit for your savings goals.
+<li><strong><span class="tab">Overdraft Protection:</span></strong><br> Opt for our optional overdraft protection to shield yourself from unexpected expenses and costly fees.</li>
 
-Transparent Banking: We believe in straightforward banking with no monthly maintenance fees, so you can keep more of your savings.
+<li><strong><span class="tab">Expert Guidance:</span></strong><br> Our experienced bankers are here to assist you in selecting the right deposit account, understanding your financial aspirations, and providing personalized advice.</li>
 
-Automated Savings: Set up automatic transfers to make saving effortless and consistent, allowing you to stay on track.
+<li><strong><span class="tab">Community Commitment:</span></strong><br> RotBank actively supports local initiatives and charitable organizations, making your savings count beyond your personal goals.</li></ul><br>
 
-Overdraft Protection: Opt for our optional overdraft protection to shield yourself from unexpected expenses and costly fees.
-
-Expert Guidance: Our experienced bankers are here to assist you in selecting the right deposit account, understanding your financial aspirations, and providing personalized advice.
-
-Digital Tools: Access an array of digital tools to track your savings progress, set goals, and plan for your financial future.
-
-Community Commitment: [Bank Name] actively supports local initiatives and charitable organizations, making your savings count beyond your personal goals.
-
-Whether you're a seasoned saver or just starting on your journey to financial independence, our Deposit Account Service is the ideal choice. With our focus on security, convenience, and your satisfaction, you can trust us to help you build a brighter financial future.
-
-Open a deposit account with us today and take the first step toward realizing your financial dreams. Your future starts here at [Bank Name]</div>
+Open a deposit account with us today and take the first step toward realizing your financial dreams. Your future starts here at RotBank!</div>
         </div>
     </div>
     <div id="loanID"></div>
@@ -100,7 +90,7 @@ export default {
     top: -5px;
 }
 
-    .maincontent {
+    .maincontent { /* everything below lower navbar */
     display: grid;
     grid-template-columns: 400px 50px 250px 250px 250px;
     grid-template-rows: 100px 100px 100px 100px;
@@ -113,9 +103,8 @@ export default {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 20px;
-    border: 3px red solid;
 
-    } 
+    } /* rotbank logo with all the features (reliability, trust etc etc) */
     .div1 { grid-area: 1 / 1 / 3 / 3; }
     .div2 { grid-area: 1 / 3 / 3 / 4; }
     .div3 { grid-area: 1 / 4 / 2 / 5; }
@@ -131,7 +120,7 @@ export default {
     }
     .div2 {
         height: 100%;
-        width: 0.5px;
+        width: 1px;
         background-color: #2B2D42;
         position:relative;
         left: 32px;
@@ -157,15 +146,17 @@ export default {
         cursor:default;
         color: rgba(229, 56, 59,.95);
     }
-    .depositContainer {
+
+
+    .depositContainer { /* first service - deposit account */
         position:relative;
-        top: 50px;
+        top: 20px;
+        padding: 0 10% 0 10%;
         display: grid;
         grid-template-columns: 25vw, 10px, 100vw;
         grid-template-rows: 5fr repeat(4, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px; 
-        border: 3px red solid;
     }
     .depositIMG { grid-area: 1 / 1 / 2 / 2; }
     .depositDIVd { grid-area: 1 / 2 / 2 / 3; }
@@ -185,7 +176,7 @@ export default {
         font-family: 'Koulen', sans-serif;
         color: white;
         line-height: 100px;
-        padding-top: 27%;
+        padding-top: 40%;
         padding-left: 10px;
         user-select: none;  
 
@@ -196,14 +187,20 @@ export default {
         background-color: #2B2D42;
         width: 1px;
         position:relative;
-        right: 100%;
-        
+        right: 12px;
     }
 
     .depositTEXT1 {
         width: 800px;
         position:relative;
         column-count: 2;
-        right: 25%;
+        font-family: 'Raleway', sans-serif;
+        line-height: 25px;
+        
+
     }
+    .depositTEXT1 li {
+        list-style-position: inside;
+        text-indent: 20px;
+    }   
 </style>
